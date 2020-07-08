@@ -7,8 +7,10 @@ admin.initializeApp({
   databaseURL: "https://the-undercover-game.firebaseio.com"
 });
 const db = admin.firestore();
+admin.firestore().settings({ignoreUndefinedProperties:true});
 
 exports.db = db;
-
+exports.FieldValue = admin.firestore.FieldValue;
+exports.FieldPath = admin.firestore.FieldPath;
 // exports the api to firebase cloud functions
 //exports.app = functions.https.onRequest(app);
