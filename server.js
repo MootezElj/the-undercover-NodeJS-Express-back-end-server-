@@ -1,8 +1,9 @@
 const express = require('express');
 const logger = require('morgan')
 const bodyParser = require ('body-parser')
-const PlayerService = require('./services/PlayerService')
 const playerResource = require ('./resources/PlayerResource')
+const roomResource = require ('./resources/RoomResource')
+const WordCoupleResource = require ('./resources/WordCoupleResource')
 const app = express();
 const port = process.env.PORT || 3000
 
@@ -19,6 +20,9 @@ app.listen(port, function(){
 
 
 app.use('/api/players',playerResource)
+app.use('/api/rooms',roomResource)
+app.use('/api/wordCouples',WordCoupleResource)
+
 
 
 
