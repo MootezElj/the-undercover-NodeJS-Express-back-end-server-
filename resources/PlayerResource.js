@@ -148,8 +148,7 @@ router.put('/wordAndRole', (req, res) => {
             console.log(error);
             return res.status(500).send(error);
         }
-    })();
-    console.log('wordIcon dasd ',id,isUndercover,isMrWhite,word,wordIcon)
+    })(err => console.error(err));
 });
 
 router.delete('/:id', (req, res) => {
