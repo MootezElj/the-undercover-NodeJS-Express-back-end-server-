@@ -10,5 +10,4 @@ Get Player by username: [https://adaptable.io/](https://back-express.adaptable.a
 
 If these don't work there is probably an issue with the app. You can Init the app back by taking what exists in the other repo: the-undercover-game, or it might a problem with the db config. \\
 
-When deploying, make sure to provide this envirnment variable:
-- BACK_END_API
+
